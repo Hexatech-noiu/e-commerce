@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Montserrat:wght@100;400;500;700&family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+    font-family: 'Poppins', 'Lato', 'Montserrat', 'sans-serif', 'Segooe UI', 'system-ui';
+}
+
+@layer utilities {
+    .invalid-feedback {
+        @apply py-2 border-2 bg-[#ff000055] border-[#ff0000]
+    }
+
+    .badge-sm {
+        @apply text-sm font-medium mr-2 px-2.5 py-0.5 rounded-md
+    }
+
+    .badge-sm-default {
+        @apply badge-sm text-slate-800 bg-slate-300
+    }
+
+    .badge-sm-cancelled {
+        @apply bg-red-600 text-white badge-sm
+    }
+
+    .badge-sm-done {
+        @apply badge-sm bg-green-500 text-white
+    }
+
+    .badge-sm-paid {
+        @apply badge-sm bg-primary-40 text-white
+    }
+
+    .badge-sm-unpaid {
+        @apply badge-sm bg-yellow-200 text-black
+    }
+}
+
