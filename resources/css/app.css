@@ -36,5 +36,16 @@
     .badge-sm-unpaid {
         @apply badge-sm bg-yellow-200 text-black
     }
+
+
+    .nav {
+        @apply relative text-white tracking-[1px] hover:text-secondary-40
+    }
+    .nav::after {
+        @apply content-[''] bg-secondary-40 h-[3px] w-[0%] left-0 -bottom-[5px] absolute duration-[400ms]
+    }
+    .nav:hover::after {
+        @apply w-[100%]
+    }
 }
 

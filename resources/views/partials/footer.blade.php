@@ -137,7 +137,7 @@
                 <div>
                     <h2 class="mb-6 text-lg font-semibold text-white uppercase">Contact Us</h2>
                     <div class="flex flex-wrap text-white font-light">
-                        <span class="mb-4 hover:text-secondary-40 duration-[400ms]"><i class="fa-solid fa-phone mr-2"></i>0261-201531</span>
+                        <span class="mb-4 hover:text-secondary-40 duration-[400ms]"><i class="fa-solid fa-phone mr-2"></i>(0261) 201531</span>
                         <span class="mb-4 hover:text-secondary-40 duration-[400ms]"><i class="fa-solid fa-envelope mr-2"></i>smkn2sumedang@yahoo.com</span>
                         <span class="mb-4 hover:text-secondary-40 duration-[400ms]"><i class="fa-solid fa-map-location-dot mr-2"></i>Jl. Arief Rahman Hakim No. 59, Kotakaler, Sumedang Utara, Kabupaten Sumedang, Jawa Barat, 45355</span>
                     </div>
