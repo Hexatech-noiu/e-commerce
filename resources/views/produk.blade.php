@@ -4,6 +4,7 @@
     <script>
         window.crsf_token = "{{ csrf_token() }}"
     </script>
+
     <section class="bg-center bg-no-repeat bg-white bg-blend-multiply mt-10 md:mt-32">
         <div class="px-4 mx-auto max-w-screen-xl text-center">
             <h1
@@ -25,7 +26,7 @@
                             <span class="text-gray-800">{{ $cat->name }}</span>
                         </button>
                     @endforeach
-
+                    {{-- 
                     <button role="tab" aria-selected="false" aria-controls="panel-2" id="tab-2" tabindex="-1"
                         class="relative block h-10 px-6 tab rounded-sm">
                         <span class="text-gray-800">Tumbler</span>
@@ -45,7 +46,7 @@
                     <button role="tab" aria-selected="false" aria-controls="panel-6" id="tab-6" tabindex="-1"
                         class="relative block h-10 px-6 tab rounded-sm">
                         <span class="text-gray-800">Pin</span>
-                    </button>
+                    </button> --}}
                 </div>
             </div>
         </div>

@@ -8,15 +8,15 @@
       <div class="relative h-56 md:h-96 overflow-hidden lg:h-[100vh]">
           <!-- Item 1 -->
           <div class="hidden duration-700 ease-in-out" data-carousel-item>
-              <img src="{{ asset('img/carousel1.jpg') }}" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+              <img src="{{ asset('img/carousel1.jpeg') }}" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
           </div>
           <!-- Item 2 -->
           <div class="hidden duration-700 ease-in-out" data-carousel-item>
-              <img src="{{ asset('img/dummy2.png') }}" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+              <img src="{{ asset('img/carousel2.jpg') }}" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
           </div>
           <!-- Item 3 -->
           <div class="hidden duration-700 ease-in-out" data-carousel-item>
-              <img src="{{ asset('img/dummy3.png') }}" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+              <img src="{{ asset('img/carousel3.jpg') }}" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
           </div>
       </div>
       <!-- Slider indicators -->
@@ -49,9 +49,9 @@
         <div class="flex flex-col lg:flex-row gap-8 items-center mx-auto max-w-screen-xl xl:gap-16">
             <div class="flex rounded-sm cursor-pointer">
               <div class="mx-auto max-w-full">
-                <div class="flex [&:hover>div]:w-4 lg:[&:hover>div]:w-16 [&>div:hover]:w-[64vw] lg:[&>div:hover]:w-[30rem]">
-                  <div class="group relative h-96 lg:w-[30rem] cursor-pointer overflow-hidden shadow-lg shadow-black/30 transition-all duration-200">
-                    <img class="h-full object-cover transition-all group-hover:rotate-12 group-hover:scale-125" src="https://cdn.pixabay.com/photo/2016/01/31/19/41/apple-1172060_960_720.jpg" alt="" />
+                <div class="flex [&:hover>div]:w-9 md:[&:hover>div]:w-14 lg:[&:hover>div]:w-16 [&>div:hover]:w-[50vw] md:[&>div:hover]:w-[500px] lg:[&>div:hover]:w-[480px]">
+                  <div class="group relative h-56 md:h-96 lg:w-[30rem] cursor-pointer overflow-hidden shadow-lg shadow-black/30 transition-all duration-200">
+                    <img class="h-full object-cover transition-all group-hover:rotate-12 group-hover:scale-125" src="{{ asset('img/slide1.jpg') }}" alt="" />
                     <div class="invisible absolute inset-0 bg-gradient-to-b from-green-500/20 to-black group-hover:visible">
                       <div class="absolute inset-x-5 bottom-6">
                         <div class="flex gap-3 text-white">
@@ -78,8 +78,8 @@
                       </div>
                     </div>
                   </div>
-                  <div class="group relative h-96 w-16 cursor-pointer overflow-hidden shadow-lg shadow-black/30 transition-all duration-200">
-                    <img class="h-full object-cover transition-all group-hover:rotate-12 group-hover:scale-125" src="https://cdn.pixabay.com/photo/2022/08/17/15/46/family-7392843_960_720.jpg" alt="" />
+                  <div class="group relative h-56 md:h-96 w-16 cursor-pointer overflow-hidden shadow-lg shadow-black/30 transition-all duration-200">
+                    <img class="h-full object-cover transition-all group-hover:rotate-12 group-hover:scale-125" src="{{ asset('img/slide2.jpg') }}" alt="" />
                     <div class="invisible absolute inset-0 bg-gradient-to-b from-green-500/20 to-black group-hover:visible">
                       <div class="absolute inset-x-5 bottom-6">
                         <div class="flex gap-3 text-white">
@@ -103,8 +103,8 @@
                       </div>
                     </div>
                   </div>
-                  <div class="group relative h-96 w-16 cursor-pointer overflow-hidden shadow-lg shadow-black/30 transition-all duration-200">
-                    <img class="h-full object-cover transition-all group-hover:rotate-12 group-hover:scale-125" src="https://cdn.pixabay.com/photo/2020/04/17/14/07/athlete-5055367_960_720.jpg" alt="" />
+                  <div class="group relative h-56 md:h-96 w-16 cursor-pointer overflow-hidden shadow-lg shadow-black/30 transition-all duration-200">
+                    <img class="h-full object-cover transition-all group-hover:rotate-12 group-hover:scale-125" src="{{ asset('img/slide3.jpg') }}" alt="" />
                     <div class="invisible absolute inset-0 bg-gradient-to-b from-green-500/20 to-black group-hover:visible">
                       <div class="absolute inset-x-5 bottom-6">
                         <div class="flex gap-3 text-white">
@@ -125,8 +125,8 @@
                       </div>
                     </div>
                   </div>
-                  <div class="group relative h-96 w-16 cursor-pointer overflow-hidden shadow-lg shadow-black/30 transition-all duration-200">
-                    <img class="h-full object-cover transition-all group-hover:rotate-12 group-hover:scale-125" src="https://cdn.pixabay.com/photo/2021/09/17/15/17/fruit-6633086_960_720.jpg" alt="" />
+                  <div class="group relative h-56 md:h-96 w-16 cursor-pointer overflow-hidden shadow-lg shadow-black/30 transition-all duration-200">
+                    <img class="h-full object-cover transition-all group-hover:rotate-12 group-hover:scale-125" src="{{ asset('img/slide4.jpg') }}" alt="" />
                     <div class="invisible absolute inset-0 bg-gradient-to-b from-green-500/20 to-black group-hover:visible">
                       <div class="absolute inset-x-5 bottom-6">
                         <div class="flex gap-3 text-white">
@@ -161,9 +161,9 @@
         </div>
     </section>
 
-    {{-- Beli sekarang --}}
+    {{-- Lihat sekarang --}}
     <section class="bg-primary-40 px-12 py-6 mt-10 lg:mt-20">
-        <div class="flex flex-col md:flex-row mx-auto max-w-screen-xl py-6 gap-8 items-center xl:gap-16">
+        <div class="flex flex-col justify-between md:flex-row mx-auto max-w-screen-xl py-6 gap-8 items-center xl:gap-16">
             <div class="lg:w-3/4">
                 <h2 class="mb-4 text-3xl tracking-tight font-extrabold text-white sm:text-4xl">Siap untuk melihat karya unik gridas?</h2>
                 <p class="max-w-2xl font-light text-white sm:text-xl">Unggul, Berakhlak Mulia, Kompetitif</p>
@@ -179,7 +179,7 @@
     {{-- Google Maps --}}
     <section class="bg-white px-12 my-10 lg:mt-20">
         <div class="mx-auto max-w-screen-xl">
-            <div class="w-full h-[400px] rounded-lg overflow-hidden">
+            <div class="w-full h-[400px] rounded-sm overflow-hidden">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15845.826280495865!2d107.9283445!3d-6.8357345!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68d3ffffffffff%3A0x64ed78d1e54e0ed8!2sSMK%20NEGERI%202%20SUMEDANG!5e0!3m2!1sid!2sid!4v1697381354549!5m2!1sid!2sid" class="w-full h-full" style="border:0;" allowfullscreen="" loading="eager" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>

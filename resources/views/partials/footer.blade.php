@@ -102,7 +102,7 @@
                     </a>
                 </div>
             </div>
-            <div class="flex flex-col sm:flex-row lg:w-[600px] gap-10 lg:ml-20 max-w-screen-xl">
+            <div class="flex flex-col sm:flex-row lg:w-[600px] gap-10 lg:ml-32 max-w-screen-xl">
                 <div>
                     <h2 class="mb-6 text-lg font-semibold text-white uppercase">Navigation</h2>
                     <ul class="text-white font-light">

@@ -6,7 +6,8 @@
     <section class="bg-center bg-no-repeat bg-white bg-blend-multiply mt-10 md:mt-32">
         <div class="sm:grid sm:grid-cols-2 lg:flex-row gap-16 mx-auto max-w-screen-xl justify-center">
             <div class="">
-                <h2 class="text-3xl tracking-tight font-extrabold text-black sm:text-4xl">Get in Touch</h2>
+                <h2 class="text-3xl tracking-tight font-extrabold text-black sm:text-4xl">Hubungi Kami</h2>
+                <p class="max-w-2xl mt-1 mb-8 text-neutral-60 text-md">Unggul, Berakhlak Mulia, Kompetitif</p>
                 <div class="flex items-center p-3 my-4 text-sm text-primary-40 border border-primary-10 rounded-lg bg-blue-50" role="alert">
                     <i class="fa-solid fa-circle-info mr-3"></i>
                     <span class="leading-tight text-xs">Silakan hubungi kami jika Anda memiliki masalah dengan situs web atau layanan kami.</span>
@@ -25,11 +26,11 @@
                     </div>
                     <div class="relative">
                         <textarea name="message" id="message" class="block mb-4 px-2.5 pb-2.5 pt-4 w-full text-sm text-black bg-transparent rounded-sm border-1 border-gray-300 appearance-none peer" placeholder=" " required></textarea>
-                        <label for="message" class="absolute text-sm text-black duration-[400ms] transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">Message</label>
+                        <label for="message" class="absolute text-sm text-black duration-[400ms] transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">Pesan</label>
                     </div>
                     <div class="flex flex-col space-y-4 sm:flex-row sm:justify-start sm:space-y-0 sm:space-x-4">
                         <button type="submit" href="#" class="inline-flex justify-center items-center py-2 px-5 text-base font-normal text-center text-white rounded-sm bg-primary-40 hover:text-black hover:bg-secondary-40 focus:ring-4 focus:ring-secondary-20 duration-[400ms]">
-                            Submit
+                            Kirim
                         </button>
                     </div>
                 </form>

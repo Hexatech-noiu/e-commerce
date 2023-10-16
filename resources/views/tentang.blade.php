@@ -4,8 +4,8 @@
 
     <section class="bg-white px-12 mt-10 lg:mt-32">
         <div class="flex flex-col lg:flex-row gap-8 items-center mx-auto max-w-screen-xl xl:gap-16">
-            <div class="lg:w-[600px] lg:h-[350px] rounded-sm overflow-hidden cursor-pointer">
-                <img class="z-20 object-cover w-full h-full transform origin-center hover:scale-125 transition-transform duration-500" src="{{ asset('img/carousel1.jpg') }}" alt="SMKN 2 Sumedang" loading="eager">
+            <div class="lg:w-[600px] lg:h-[380px] rounded-sm overflow-hidden cursor-pointer">
+                <img class="z-20 object-cover w-full h-full transform origin-center hover:scale-125 transition-transform duration-500" src="{{ asset('img/tentang.jpg') }}" alt="SMKN 2 Sumedang" loading="eager">
             </div>
             <div class="lg:w-1/2">
                 <h4 class="text-lg tracking-tight font-normal text-black italic">Tentang

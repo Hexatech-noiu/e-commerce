@@ -71,3 +71,13 @@ Route::get(
         );
     }
 );
+
+Route::get(
+    '/login',
+    function () {
+        return view("auth.login", [
+            "active" => "beranda",
+            "title" => "Beranda"
+        ]);
+    }
+);
