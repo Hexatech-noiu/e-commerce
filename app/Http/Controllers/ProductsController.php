@@ -6,6 +6,7 @@ use App\Models\Category;
 use App\Models\Products;
 use App\Http\Requests\StoreProductsRequest;
 use App\Http\Requests\UpdateProductsRequest;
+use Illuminate\Http\Request;
 
 class ProductsController extends Controller
 {
@@ -53,8 +54,8 @@ class ProductsController extends Controller
      */
     public function pesan(Products $products)
     {
-        $message = "Halo kak saya ingin memesan produk.\nNama Produk: $products->name\nHarga Produk: Rp. " . number_format($products->price, 0, ',', '.')."\nURL Produk: " . route('produk_one_show', $products->id);
-        return redirect('https://api.whatsapp.com/send?phone='.env('PHONE_NUMBER', '6285156105763').'&text='.urlencode($message).'&source=&data=');
+        $message = "Halo kak saya ingin memesan produk.\nNama Produk: $products->name\nHarga Produk: Rp. " . number_format($products->price, 0, ',', '.') . "\nURL Produk: " . route('produk_one_show', $products->id);
+        return redirect('https://api.whatsapp.com/send?phone=' . env('PHONE_NUMBER', '6285156105763') . '&text=' . urlencode($message) . '&source=&data=');
     }
 
     /**
@@ -79,5 +80,28 @@ class ProductsController extends Controller
     public function destroy(Products $products)
     {
         //
+    }
+
+    public function getCategory(Request $req)
+    {
+        try {
+            $categories = Category::where('id', request()->id)->get();
+
+            $view = view('partials.tabs', [
+                'categories' => $categories
+            ])->render();
+
+            return response()->json([
+                'status' => 'success',
+                'message' => 'Kategori ditemukan!',
+                'view' => $view
+            ], 200);
+        } catch (\Throwable $th) {
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Data gagal diambil atau tidak ada',
+                'error' => $th->getMessage(),
+            ], 400);
+        }
     }
 }

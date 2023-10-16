@@ -45,7 +45,7 @@
                 <li><a href="/produk#" class="block lg:w-48 py-2 pl-3 pr-4 rounded-sm hover:text-black hover:bg-secondary-40 lg:text-black lg:hover:bg-gray-200 duration-[400ms] lg:py-3 lg:px-3 lg:space-y-4">Design and Printing</a></li>
                 <li><a href="/produk#" class="block lg:w-48 py-2 pl-3 pr-4 rounded-sm hover:text-black hover:bg-secondary-40 lg:text-black lg:hover:bg-gray-200 duration-[400ms] lg:py-3 lg:px-3 lg:space-y-4">Pemasaran</a></li>
             </ul>
-            <li><a href="#" class="nav block py-2 pl-3 text-white lg:hover:text-secondary-40 duration-[400ms] lg:p-0">Tentang Kami</a></li>
+            <li><a href="/tentang" class="nav block py-2 pl-3 text-white lg:hover:text-secondary-40 duration-[400ms] lg:p-0">Tentang Kami</a></li>
             <li><a href="/kontak" class="nav block py-2 pl-3 text-white lg:hover:text-secondary-40 duration-[400ms] lg:p-0">Kontak</a></li>
             </ul>
         </div>

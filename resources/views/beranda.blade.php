@@ -8,7 +8,7 @@
       <div class="relative h-56 md:h-96 overflow-hidden lg:h-[100vh]">
           <!-- Item 1 -->
           <div class="hidden duration-700 ease-in-out" data-carousel-item>
-              <img src="{{ asset('img/dummy1.png') }}" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+              <img src="{{ asset('img/carousel1.jpg') }}" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
           </div>
           <!-- Item 2 -->
           <div class="hidden duration-700 ease-in-out" data-carousel-item>
@@ -157,6 +157,30 @@
               <p class="mb-4 font-light text-neutral-60 md:text-lg">
                 E-Commerce SMK Negeri 2 Sumedang adalah sebuah platform penjualan online yang dikelola oleh siswa dan siswi SMK Negeri 2 Sumedang. Platform ini bertujuan untuk memberikan wadah bagi siswa dan siswi untuk berwirausaha dan mengembangkan keterampilan mereka. E-commerce SMK Negeri 2 Sumedang menyediakan berbagai macam produk, mulai dari produk fashion hingga produk makanan dan minuman. Produk-produk yang dijual di platform ini merupakan hasil karya siswa dan siswi SMK Negeri 2 Sumedang.
               </p>
+            </div>
+        </div>
+    </section>
+
+    {{-- Beli sekarang --}}
+    <section class="bg-primary-40 px-12 py-6 mt-10 lg:mt-20">
+        <div class="flex flex-col md:flex-row mx-auto max-w-screen-xl py-6 gap-8 items-center xl:gap-16">
+            <div class="lg:w-3/4">
+                <h2 class="mb-4 text-3xl tracking-tight font-extrabold text-white sm:text-4xl">Siap untuk melihat karya unik gridas?</h2>
+                <p class="max-w-2xl font-light text-white sm:text-xl">Unggul, Berakhlak Mulia, Kompetitif</p>
+            </div>
+            <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4 w-full sm:w-auto">
+                <a href="/produk" class="inline-flex w-full sm:w-auto justify-center items-center py-3 px-7 text-lg font-normal text-center rounded-sm text-black bg-secondary-40 border-[3px] border-secondary-40 hover:text-secondary-40 hover:bg-transparent focus:ring-4 focus:ring-secondary-50 duration-[400ms]">
+                    Lihat Sekarang
+                </a>
+            </div>
+        </div>
+    </section>
+
+    {{-- Google Maps --}}
+    <section class="bg-white px-12 my-10 lg:mt-20">
+        <div class="mx-auto max-w-screen-xl">
+            <div class="w-full h-[400px] rounded-lg overflow-hidden">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15845.826280495865!2d107.9283445!3d-6.8357345!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68d3ffffffffff%3A0x64ed78d1e54e0ed8!2sSMK%20NEGERI%202%20SUMEDANG!5e0!3m2!1sid!2sid!4v1697381354549!5m2!1sid!2sid" class="w-full h-full" style="border:0;" allowfullscreen="" loading="eager" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </section>

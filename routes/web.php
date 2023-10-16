@@ -26,15 +26,24 @@ Route::get(
 );
 
 Route::get(
-    '/produk', [ProductsController::class, 'index']
+    '/produk',
+    [ProductsController::class, 'index']
 )->name('produk_many');
 
 Route::get(
-    '/produk/{products:id}', [ProductsController::class, 'show']
+    '/produk/{products:id}',
+    [ProductsController::class, 'show']
 )->name('produk_one_show');
+
 Route::get(
-    '/produk/pesan/{products:id}', [ProductsController::class, 'pesan']
+    '/produk/pesan/{products:id}',
+    [ProductsController::class, 'pesan']
 )->name('produk_one_pesan');
+
+Route::get(
+    '/tabs/{id}',
+    [ProductsController::class, 'getCategory']
+)->name('get_tabs');
 
 
 Route::get(
