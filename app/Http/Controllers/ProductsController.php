@@ -14,16 +14,21 @@ class ProductsController extends Controller
      */
     public function index()
     {
+        $categories = Category::with('products')->get();
+        $category = $categories;
+        if (request("category")) {
+            $category = Category::with('products')->where('name', 'LIKE', '%' . request('category') . '%')->get();
+        }
         return view(
             'produk',
             [
                 "active" => "beranda",
                 "title" => "Beranda",
-                'categories' => Category::with('products')->get()
+                'categories' => $categories,
+                'category' => $category
             ]
         );
     }
-
     /**
      * Show the form for creating a new resource.
      */
@@ -53,8 +58,8 @@ class ProductsController extends Controller
      */
     public function pesan(Products $products)
     {
-        $message = "Halo kak saya ingin memesan produk.\nNama Produk: $products->name\nHarga Produk: Rp. " . number_format($products->price, 0, ',', '.')."\nURL Produk: " . route('produk_one_show', $products->id);
-        return redirect('https://api.whatsapp.com/send?phone='.env('PHONE_NUMBER', '6285156105763').'&text='.urlencode($message).'&source=&data=');
+        $message = "Halo kak saya ingin memesan produk.\nNama Produk: $products->name\nHarga Produk: Rp. " . number_format($products->price, 0, ',', '.') . "\nURL Produk: " . route('produk_one_show', $products->id);
+        return redirect('https://api.whatsapp.com/send?phone=' . env('PHONE_NUMBER', '6285156105763') . '&text=' . urlencode($message) . '&source=&data=');
     }
 
     /**
