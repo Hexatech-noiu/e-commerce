@@ -127,11 +127,24 @@
                             <a href="#" class="hover:text-secondary-40 duration-[400ms]">Privacy Policy</a>
                         </li>
                         <li class="mb-4">
-                            <a href="#" class="hover:text-secondary-40 duration-[400ms]">Terms &amp; Conditions</a>
+                            <a class="hover:text-secondary-40 duration-[400ms]">Terms &amp; Conditions</a>
                         </li>
                         <li class="mb-4">
                             <a data-modal-toggle="FAQModal" class="hover:text-secondary-40 duration-[400ms] cursor-pointer">FAQ</a>
                         </li>
+                        @guest
+                        <li class="mb-4 opacity-10">
+                            <a href="{{route('login')}}" class="hover:text-secondary-40 duration-[400ms]">Login</a>
+                        </li>
+                        @endguest
+                        @auth
+                        <li class="mb-4 opacity-25">
+                            <form method="POST" action="{{route('logout')}}">
+                                @csrf
+                                <button class="hover:text-secondary-40 duration-[400ms]">Logout</button>
+                            </form>
+                        </li>
+                        @endauth
                     </ul>
                 </div>
                 <div>

@@ -4,12 +4,11 @@
     <section class="flex flex-col items-center justify-center px-6 py-10 mx-auto md:h-screen">
         <div class="w-full bg-white rounded-lg shadow-xl border border-neutral-20 my-28 sm:max-w-md">
 
-            <div class="h-16 mt-6 mx-auto bg-primary-400 rounded bg-cover" style="background: url({{ asset('img/logo.svg') }})">
-            </div>
+            <img class="h-16 mt-6 mx-auto bg-primary-40 p-3 rounded-md" src="{{ asset('img/logo.svg') }}">
 
             <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
                 <h1 class="text-xl font-bold leading-tight tracking-tight text-black md:text-2xl">
-                    Sign in to Your Account
+                    Selamat datang kembali! Silahkan masuk
                 </h1>
                 <form class="space-y-4 md:space-y-6" action="/login" method="POST">
                     @csrf
@@ -22,7 +21,7 @@
                         <label for="email" class="block mb-2 text-sm font-medium text-black">Email</label>
                         <input value="{{ old('email') }}" type="email" name="email" id="email"
                             class="bg-white border @error('email') border-red-700 @enderror text-black sm:text-sm rounded-lg focus:ring-primary-20 focus:border-primary-40 block w-full p-2.5"
-                            placeholder="hexatechnoiu@gmail.com" required>
+                            placeholder="Joko@email.co.id" required>
                         @error('email')
                             <div class="text-red-900">
                                 {{ $message }}
@@ -32,7 +31,7 @@
                     <div>
                         <label for="password" class="block mb-2 text-sm font-medium text-black">Password</label>
                         <div class="relative flex items-center">
-                            <input type="password" name="password" id="password" placeholder="Your Password"
+                            <input type="password" name="password" id="password" placeholder="••••••••"
                                 autocomplete="none"
                                 class="bg-white border text-black sm:text-sm rounded-lg focus:ring-primary-20 focus:border-primary-40 block w-full p-2.5 pr-10"
                                 required>

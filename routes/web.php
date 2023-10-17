@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\ProductsController;
 use App\Models\Category;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProductsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,6 +47,7 @@ Route::get(
 )->name('get_tabs');
 
 
+
 Route::get(
     '/tentang',
     function () {
@@ -72,12 +74,38 @@ Route::get(
     }
 );
 
-Route::get(
-    '/login',
-    function () {
-        return view("auth.login", [
-            "active" => "beranda",
-            "title" => "Beranda"
-        ]);
-    }
-);
+
+Route::controller(ProductsController::class)->group(function () {
+    Route::get('/dashboard', function () {
+        $cats = Category::with('products')->get();
+        $cat = Category::with('products')->get();
+        if (request('q')) {
+            $cat = Category::with('products')
+            ->whereHas('products', function ($query) {
+                $query->where('name', 'LIKE', '%' . request('q') . '%');
+            })
+            ->get();
+        }
+        return view(
+            'dashboard.products',
+            [
+                'categories' => $cats,
+                'category' => $cat,
+            ]
+        );
+    })->name('produk_show')->middleware('auth');
+    Route::post('/dashboard/produk', 'store');
+    Route::put('/dashboard/produk/{id}', 'update');
+    Route::delete('/dashboard/produk/{products:id}', 'destroy');
+})->name('dashboard');
+
+
+
+
+Route::controller(UserController::class)->group(function () {
+    Route::get('/login', 'login')->middleware('guest')->name('login');
+    // Route::get('/register', 'register')->middleware('guest');
+    Route::post('/register', 'store');
+    Route::post('/login', 'authenticate');
+    Route::post('/logout', 'logout')->name('logout');
+});
