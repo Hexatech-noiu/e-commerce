@@ -3,12 +3,12 @@
 @section('container')
 
     {{-- Get In Touch --}}
-    <section class="bg-center bg-no-repeat bg-white bg-blend-multiply mt-10 md:mt-32">
-        <div class="sm:grid sm:grid-cols-2 lg:flex-row gap-16 mx-auto max-w-screen-xl justify-center">
+    <section class="bg-center bg-no-repeat bg-white bg-blend-multiply px-12 mt-10 md:mt-32">
+        <div class="md:grid md:grid-cols-2 lg:flex-row gap-16 mx-auto max-w-screen-xl justify-center">
             <div class="">
                 <h2 class="text-3xl tracking-tight font-extrabold text-black sm:text-4xl">Hubungi Kami</h2>
                 <p class="max-w-2xl mt-1 mb-8 text-neutral-60 text-md">Unggul, Berakhlak Mulia, Kompetitif</p>
-                <div class="flex items-center p-3 my-4 text-sm text-primary-40 border border-primary-10 rounded-lg bg-blue-50" role="alert">
+                <div class="flex items-center p-3 my-4 text-sm text-primary-40 border border-primary-10 rounded-sm bg-blue-50" role="alert">
                     <i class="fa-solid fa-circle-info mr-3"></i>
                     <span class="leading-tight text-xs">Silakan hubungi kami jika Anda memiliki masalah dengan situs web atau layanan kami.</span>
                 </div>
@@ -35,14 +35,16 @@
                     </div>
                 </form>
             </div>
-            <div class="flex flex-wrap max-w-screen-xl justify-center gap-10 mt-20 sm:mt-0">
-                <div class="w-full h-[40%] lg:h-[250px] rounded-sm overflow-hidden">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15845.826280495865!2d107.9283445!3d-6.8357345!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68d3ffffffffff%3A0x64ed78d1e54e0ed8!2sSMK%20NEGERI%202%20SUMEDANG!5e0!3m2!1sid!2sid!4v1697381354549!5m2!1sid!2sid" width="600" height="450" style="border:0;" frameborder="0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+            <section class="bg-white my-10 lg:mt-20">
+                <div class="mx-auto max-w-screen-xl">
+                    <div class="w-full h-[400px] lg:h-[250px] mb-6 rounded-sm overflow-hidden">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15845.826280495865!2d107.9283445!3d-6.8357345!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68d3ffffffffff%3A0x64ed78d1e54e0ed8!2sSMK%20NEGERI%202%20SUMEDANG!5e0!3m2!1sid!2sid!4v1697381354549!5m2!1sid!2sid" class="w-full h-full" style="border:0;" allowfullscreen="" loading="eager" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
                 </div>
                 <div class="flex flex-col text-black font-light w-full">
-                    <span class="mb-4 hover:text-primary-40 duration-[400ms]"><i class="fa-solid fa-phone mr-2 text-primary-40"></i>Telepon : (0261) 201531</span>
-                    <span class="mb-4 hover:text-primary-40 duration-[400ms]"><i class="fa-solid fa-envelope mr-2 text-primary-40"></i>Email : smkn2sumedang@yahoo.com</span>
-                    <span class="mb-4 hover:text-primary-40 duration-[400ms]"><i class="fa-solid fa-map-location-dot mr-2 text-primary-40"></i>Alamat : Jl. Arief Rahman Hakim No. 59, Kotakaler, Sumedang Utara, Kabupaten Sumedang, Jawa Barat, 45355</span>
+                    <span class="mb-4 text-primary-40 hover:text-secondary-40 duration-[400ms]"><i class="fa-solid fa-phone mr-2"></i>Telepon : (0261) 201531</span>
+                    <span class="mb-4 text-primary-40 hover:text-secondary-40 duration-[400ms]"><i class="fa-solid fa-envelope mr-2"></i>Email : smkn2sumedang@yahoo.com</span>
+                    <span class="mb-4 text-primary-40 hover:text-secondary-40 duration-[400ms]"><i class="fa-solid fa-map-location-dot mr-2"></i>Alamat : Jl. Arief Rahman Hakim No. 59, Kotakaler, Sumedang Utara, Kabupaten Sumedang, Jawa Barat, 45355</span>
                 </div>
             </div>
         </div>

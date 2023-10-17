@@ -16,8 +16,8 @@ class ProductsController extends Controller
         return view(
             'produk',
             [
-                "active" => "Kategori",
-                "title" => "Kategori",
+                "active" => "produk",
+                "title" => "Produk",
                 'categories' => Category::with('products')->get()
             ]
         );
@@ -41,11 +41,6 @@ class ProductsController extends Controller
         Products::create($valData);
         return redirect()->back()->with(['success' => 'Product created successfully']);
     }
-
-
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(UpdateProductsRequest $request, Products $products)
     {
         $request['price'] = str_replace(['.', ','], '', $request->price);
@@ -70,10 +65,6 @@ class ProductsController extends Controller
 
         return redirect()->back()->with('success', 'Product has been updated');
     }
-
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(Products $products)
     {
         Storage::delete($products->picture);
@@ -81,18 +72,31 @@ class ProductsController extends Controller
         return redirect()->back()->with('success', 'Product Has Been deleted sucessfully');
     }
 
+    public function show(Products $products)
+    {
+        return view('preview', [
+            'products' => $products,
+            'active' => 'produk'
+        ]);
+    }
+
     public function getCategory(Request $req)
     {
         try {
-            if (request()->id == 0){
+            if ($req->id == 0) {
                 $categories = Category::with('products')->get();
-
+                $view = view('partials.tabs', [
+                    'categories' => $categories
+                ])->render();
+            } else {
+                $categories = Category::where('id', request()->id)->with('products')->get();
+                $view = view(
+                    'partials.tabs',
+                    [
+                        'categories' => $categories
+                    ]
+                )->render();
             }
-            $categories = Category::where('id', request()->id)->with('products')->get();
-
-            $view = view('partials.tabs', [
-                'categories' => $categories
-            ])->render();
 
             return response()->json([
                 'status' => 'success',
@@ -107,13 +111,9 @@ class ProductsController extends Controller
             ], 400);
         }
     }
-    /**
-     * Display the specified resource.
-     */
     public function pesan(Products $products)
     {
         $message = "Halo kak saya ingin memesan produk.\nNama Produk: $products->name\nHarga Produk: Rp. " . number_format($products->price, 0, ',', '.') . "\nURL Produk: " . route('produk_one_show', $products->id);
         return redirect('https://api.whatsapp.com/send?phone=' . env('PHONE_NUMBER', '6285156105763') . '&text=' . urlencode($message) . '&source=&data=');
     }
 }
-

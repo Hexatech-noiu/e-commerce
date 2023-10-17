@@ -4,6 +4,7 @@ use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductsController;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,7 +25,7 @@ Route::get(
             "title" => "Beranda"
         ]);
     }
-);
+)->name('home');
 
 Route::get(
     '/produk',
@@ -47,15 +48,14 @@ Route::get(
 )->name('get_tabs');
 
 
-
 Route::get(
     '/tentang',
     function () {
         return view(
             'tentang',
             [
-                "active" => "beranda",
-                "title" => "Beranda"
+                "active" => "tentang",
+                "title" => "Tentang kami"
             ]
         );
     }
@@ -67,8 +67,8 @@ Route::get(
         return view(
             'kontak',
             [
-                "active" => "beranda",
-                "tite" => "Beranda"
+                "active" => "kontak",
+                "tite" => "Kontak"
             ]
         );
     }
@@ -81,10 +81,10 @@ Route::controller(ProductsController::class)->group(function () {
         $cat = Category::with('products')->get();
         if (request('q')) {
             $cat = Category::with('products')
-            ->whereHas('products', function ($query) {
-                $query->where('name', 'LIKE', '%' . request('q') . '%');
-            })
-            ->get();
+                ->whereHas('products', function ($query) {
+                    $query->where('name', 'LIKE', '%' . request('q') . '%');
+                })
+                ->get();
         }
         return view(
             'dashboard.products',
@@ -108,4 +108,15 @@ Route::controller(UserController::class)->group(function () {
     Route::post('/register', 'store');
     Route::post('/login', 'authenticate');
     Route::post('/logout', 'logout')->name('logout');
+});
+
+Route::get('/preview/{products:id}', [ProductsController::class, 'show']);
+Route::post('/send', function (Request $request) {
+    $data = $request->validate([
+        'name' => 'required',
+        'email' => 'required',
+        'message' => 'required',
+    ]);
+    $message = "**" . $data['name'] . "(" . $data['email'] . ")** \n" . $data['message'];
+    return redirect('https://api.whatsapp.com/send?phone=' . env('PHONE_NUMBER', '111111111111') . '&text=' . urlencode($message) . '&source=&data=');
 });

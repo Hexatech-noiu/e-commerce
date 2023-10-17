@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->enum('tipe', ['suvenir', 'gift', 'food'])->default('suvenir');
             $table->enum('status', ['active', 'deactive'])->default('active');
             $table->timestamps();
         });
